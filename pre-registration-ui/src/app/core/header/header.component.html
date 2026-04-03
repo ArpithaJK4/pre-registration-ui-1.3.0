@@ -1,6 +1,7 @@
 <mat-sidenav-container [dir]="textDirection()">
   <mat-sidenav #sidenav role="navigation" position="start" mode="push">
     <mat-nav-list class="sidenav-list">
+       <a mat-list-item routerLink="#" (click)="sidenav.toggle()"> {{ 'header.home' | translate }}</a>
       <a mat-list-item routerLink="/about-us" (click)="sidenav.toggle()"> {{ 'header.link_about' | translate }}</a>
       <a mat-list-item routerLink="/faq" (click)="sidenav.toggle()">{{ 'header.link_faq' | translate }}</a>
       <a mat-list-item routerLink="/contact" (click)="sidenav.toggle()">{{ 'header.link_contact' | translate }}</a>
@@ -20,12 +21,21 @@
             <mat-icon style="color: white;">menu</mat-icon>
         </button>
       </div>
-      <a *ngIf="!authService.isAuthenticated()" href="./" mat-list-item>
-        <img src="assets\mosip-logo-white.png" alt="MOSIP logo" class="header--logo" style="max-height: 2.5rem"/>
-      </a>
-      <a *ngIf="authService.isAuthenticated()" (click)="onLogoClick()" mat-list-item>
-        <img src="assets\mosip-logo-white.png" alt="MOSIP logo" class="header--logo" style="max-height: 2.5rem"/>
-      </a>
+      <header class="gov-header">
+          <div class="container">
+            <a *ngIf="!authService.isAuthenticated()" href="./" mat-list-item>
+              <img src="assets\zambia-logo-small.svg" alt="MOSIP logo" class="header--logo" style="max-height: 2.5rem"/>
+            </a>
+            <a *ngIf="authService.isAuthenticated()" (click)="onLogoClick()" mat-list-item>
+              <img src="assets\zambia-logo-small.svg" alt="MOSIP logo" class="header--logo" style="max-height: 2.5rem"/>
+            </a>
+            <div class="text">
+              <h1 class='h1'>Republic of Zambia</h1>
+              <h2 class='h2'>National Identity Registration</h2>
+            </div>
+
+          </div>
+      </header>
       <mat-nav-list class="list-item">
         <a mat-list-item routerLink="/about-us">{{ 'header.link_about' | translate }}</a>
         <a mat-list-item routerLink="/faq">{{ 'header.link_faq' | translate }}</a>
