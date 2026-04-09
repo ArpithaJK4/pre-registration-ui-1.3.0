@@ -282,7 +282,7 @@
   "login": {
     "text": "ZamIdentity",
     "sub_text": "Pre-register for",
-    "sub_text_UID": "Unique Identification Number",
+    "sub_text_UID": "National Registration Card (NRC)",
     "label_email_num": "Email ID or Phone Number",
     "label_otp": "Enter OTP",
     "action_send": "Send OTP",
