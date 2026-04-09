@@ -1,6 +1,6 @@
 .main-footer {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   font-family: Roboto, sans-serif;
   font-size: 12px;
   padding-top: 10px;

@@ -2,11 +2,51 @@
   box-sizing: border-box;
 }
 
+.card {
+  width: auto;
+  padding: 40px;
+  height: auto;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: transparent !important;
+}
+
+.center-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-gradient{
+  background-color:greenyellow;
+}
+
+.login-display{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(0.25turn, #f68a8a52, #011924db,#f69d3c);
+}
+
+.login-display .form_wrapper {
+  margin-top: 10%;
+  line-height: 2rem;
+  justify-self: center;
 }
 
 .spacing {
@@ -24,11 +64,6 @@
   font-size: 13px;
   font-weight: bolder;
   margin-top: -10px;
-}
-
-.form_wrapper {
-  margin: 4% 0;
-  line-height: 2rem;
 }
 
 .form_fields_padding {
@@ -69,6 +104,10 @@ mat-form-field {
 
 .pinkText {
   color: #fe528d;
+}
+
+.greenText{
+  color: greenyellow;
 }
 
 button {
